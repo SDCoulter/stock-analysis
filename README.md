@@ -1,3 +1,3 @@
-# stock-analysis
-Module 2 of UoT Data Bootcamp
-(first commit test)
+# Stock Analysis - Module 2 of UoT DA BC
+
+Module 2 of UoT Data Analysis Bootcamp
