@@ -10,7 +10,7 @@ The purpose of this analysis was to compare Green Energy stocks from the years 2
 
 Our comparison will be based on the individual stocks yearly returns, and we are going to compare the years 2017 and 2018. To make the comparison easier to see visually we added a section in VBA to format the code based on whether the return was positive (green) or negative (red). This allowed us to quickly see the difference in the years and see that almost all the stocks performed better in 2017 rather than 2018.
 
-![](resources/ z_2017_2018_Stocks.png)
+![](resources/z_2017_2018_Stocks.png)
 
 Even a cursory glance as these two years informs the reader that 2018 had a much worse return for most of the stocks when compared to 2017. So, our expectation that the Green Energy field would grow year over year is flawed. There was about the same total volume of trades made each year too, so no noticeable increase in either of our compared factors.
 
@@ -33,10 +33,14 @@ For j = 0 To 11
 
 So, instead of running through the whole dataset each time, we would run through it once and pull out the parts we needed and connect them to various arrays and variables to keep track that way. This meant we removed the nested for loop and sped the program up dramatically, you can see the comparisons of the original program vs. the refactored one below:
 
+<center>
+
 BEFORE                    |  AFTER
 :-------------------------:|:-------------------------:
 ![](resources/z_Original_2017.png)  |  ![](resources/VBA_Challenge_2017.png)
-![](resources/z_Original_2018.png)  |  ![](resources/ VBA_Challenge_2018.png)
+![](resources/z_Original_2018.png)  |  ![](resources/VBA_Challenge_2018.png)
+
+</center>
 
 As you can clearly see there was a dramatic improvement in the runtime of the program from the original (BEFORE) and the refactored code (AFTER). This quite simply proves that the refactoring was worth the work.
 
