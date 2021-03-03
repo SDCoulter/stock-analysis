@@ -20,27 +20,24 @@ Once we had the original program together and working it was time to refactor th
 
 ```vba
 For j = 0 To 11
-        Worksheets(yearValue).Activate
-        ticker = tickers(j)
-        totalVolume = 0
-        ‘Loop through entire dataset.
-        For i = 2 To rowEnd
+    Worksheets(yearValue).Activate
+    ticker = tickers(j)
+    totalVolume = 0
+
+    ‘Loop through entire dataset.
+    For i = 2 To rowEnd
         'increase totalVolume if ticker matches
         'Assigns values to staring/ending variables
-            If Cells(i, 1) = ticker Then
-		…
+        If Cells(i, 1) = ticker Then
+            ...
 ```
 
 So, instead of running through the whole dataset each time, we would run through it once and pull out the parts we needed and connect them to various arrays and variables to keep track that way. This meant we removed the nested for loop and sped the program up dramatically, you can see the comparisons of the original program vs. the refactored one below:
-
-<center>
 
 BEFORE                    |  AFTER
 :-------------------------:|:-------------------------:
 ![](resources/z_Original_2017.png)  |  ![](resources/VBA_Challenge_2017.png)
 ![](resources/z_Original_2018.png)  |  ![](resources/VBA_Challenge_2018.png)
-
-</center>
 
 As you can clearly see there was a dramatic improvement in the runtime of the program from the original (BEFORE) and the refactored code (AFTER). This quite simply proves that the refactoring was worth the work.
 
